@@ -1,0 +1,139 @@
+/* Home.css */
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2d2d2d 50%, #000 100%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: white;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content-wrapper {
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.text-section {
+  max-width: 400px;
+  margin-left: -55%;
+}
+
+.text-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.text-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: #b0b0b0;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.highlight {
+  color: #7f7fff;
+}
+
+.portfolio-button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 2%;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.portfolio-button:hover {
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+}
+
+.arrow-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-button .arrow-icon {
+  transform: rotate(0deg);
+}
+
+.portfolio-button:hover .arrow-icon {
+  transform: rotate(90deg);
+}
+
+.hero-image {
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  margin-top: 2rem;
+}
+
+@media (min-width: 500px) {
+  .image-section {
+    margin-left: 20%;
+  }
+  .text-section {
+    margin-right: -50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+
+  .content-wrapper {
+    flex: 1;
+    text-align: left;
+    margin-top: 0;
+    margin-right: 2rem;
+  }
+
+  .image-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-wrapper {
+    margin-right: 4rem;
+  }
+}
