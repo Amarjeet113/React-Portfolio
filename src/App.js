@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import SocialLinks from "./components/SocialLinks";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
-import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -22,8 +22,8 @@ function App() {
       <section name="portfolio" className="section">
         <Portfolio />
       </section>
-      <section name="Experience" className="section">
-        <Experience />
+      <section name="Skills" className="section">
+        <Skills />
       </section>
       <section name="Contact" className="section">
         <Contact />
