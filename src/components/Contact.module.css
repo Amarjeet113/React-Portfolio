@@ -129,7 +129,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
   .headingText {
     font-size: 2rem;
   }
