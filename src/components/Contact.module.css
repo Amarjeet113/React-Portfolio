@@ -110,22 +110,32 @@ body {
 /* Media Queries for Responsive Design */
 
 @media (max-width: 1024px) {
-  .content {
-    padding: 0 5%;
+    .headingText {
+    font-size: 2rem;
+  }
+
+  .form {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .headingText {
-    font-size: 3rem;
+    .headingText {
+    font-size: 2rem;
   }
 
   .form {
-    max-width: 80%;
+    max-width: 90%;
+    padding: 1rem;
   }
 
-  .content {
-    margin: 8% 5%;
+  .button {
+    padding: 0.5rem 1rem;
   }
 }
 
