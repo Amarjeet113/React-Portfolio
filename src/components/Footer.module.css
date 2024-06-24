@@ -15,11 +15,13 @@
   width: 100%;
   max-width: 1200px;
   flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .socialLinks {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .socialLinks a {
@@ -56,6 +58,7 @@
   color: #ccc;
 }
 
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .footerContent {
     flex-direction: column;
