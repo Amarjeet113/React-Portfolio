@@ -35,13 +35,14 @@ body {
   align-items: center;
   text-align: center;
   margin: 2rem;
-  margin-top:2%;
-  margin-left:2%;
+  
 }
 
 .text-section {
   max-width: 600px;
   margin-bottom: 2rem;
+  margin-top: 2%;
+  margin-left:2%;
 }
 
 .text-section h1 {
