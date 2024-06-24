@@ -110,32 +110,22 @@ body {
 /* Media Queries for Responsive Design */
 
 @media (max-width: 1024px) {
-    .headingText {
-    font-size: 2rem;
-  }
-
-  .form {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  .button {
-    padding: 0.5rem 1rem;
+  .content {
+    padding: 0 5%;
   }
 }
 
 @media (max-width: 768px) {
-    .headingText {
-    font-size: 2rem;
+  .headingText {
+    font-size: 3rem;
   }
 
   .form {
-    max-width: 100%;
-    padding: 1rem;
+    max-width: 80%;
   }
 
-  .button {
-    padding: 0.5rem 1rem;
+  .content {
+    margin: 8% 5%;
   }
 }
 
@@ -153,3 +143,24 @@ body {
     padding: 0.5rem 1rem;
   }
 }
+/* Increase the font size of the form labels and input fields */
+.input,
+.textarea,
+.label {
+  font-size: 14px;
+}
+
+/* Increase the padding around the input fields */
+.input,
+.textarea {
+  padding: 10px;
+}
+
+/* Make the form container wider on smaller screens */
+@media (max-width: 768px) {
+  .formContainer {
+    width: 90%;
+  }
+}
+
+
