@@ -4,6 +4,13 @@
   100% { background-position: 0% 50%; }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
 .container {
   width: 100%;
   height: 100vh;
@@ -24,38 +31,44 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: screen-lg;
-  margin: 10%;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
   height: 100%;
   position: relative;
   z-index: 10;
+  padding: 5%;
 }
 
 .heading {
   padding-bottom: 2rem;
+  text-align: center;
 }
 
 .headingText {
   font-size: 4rem;
   font-weight: bold;
   border-bottom: 4px solid gray;
+  margin-bottom: 1rem;
 }
 
 .subText {
   padding: 1.5rem 0;
+  text-align: center;
 }
 
 .formContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 50%;
+  max-width: 600px;
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 0.5rem;
@@ -75,7 +88,7 @@
 .input:focus,
 .textarea:focus {
   outline: none;
-  
+  border-color: cyan;
 }
 
 .button {
@@ -83,11 +96,40 @@
   padding: 0.75rem 1.5rem;
   margin: 2rem auto 0;
   display: flex;
+  justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .button:hover {
   transform: scale(1.1);
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+  .headingText {
+    font-size: 3rem;
+  }
+
+  .form {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .headingText {
+    font-size: 2rem;
+  }
+
+  .form {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+  }
 }
