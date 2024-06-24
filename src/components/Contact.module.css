@@ -13,7 +13,7 @@ body {
 
 .container {
   width: 100%;
-  height: 100vh;
+  height: auto;
   background: linear-gradient(to bottom, black, gray);
   position: relative;
   overflow: hidden;
