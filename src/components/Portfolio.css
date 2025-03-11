@@ -1,0 +1,53 @@
+@keyframes move-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.portfolio-container {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2d2d2d 50%, #000 100%);
+  background-size: 800% 800%;
+  animation: move-bg 15s ease infinite;
+  width: 100%;
+  
+  min-height: 100vh;
+}
+
+.portfolio-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay to darken the background */
+  z-index: -1;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.hover\\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.btn-demo {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  transition: background 300ms;
+}
+.btn-demo:hover {
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
+}
+
+.btn-code {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  transition: background 300ms;
+}
+.btn-code:hover {
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+}

@@ -1,0 +1,138 @@
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2d2d2d 50%, #000 100%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.projectHeading {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.purple {
+  color: #6a0dad;
+}
+
+.horizontalBoxes, .skillsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(138, 59, 59, 0.1);
+  padding: 1.5rem;
+  margin: 1rem;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(141, 62, 62, 0.2);
+}
+
+.box h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #2c1f1f;
+}
+
+.box img {
+  margin-bottom: 1rem;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.skillsContainer .box {
+  width: 150px;
+  height: 150px;
+}
+
+.skillsContainer .box img {
+  width: 90px;
+  height: 90px;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: calc(50% - 2rem);
+  }
+  .skillsContainer .box {
+    width: calc(33.33% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 100%;
+  }
+  .skillsContainer .box {
+    width: 100%;
+  }
+}
+
+img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Responsive styles for activity images */
+.activityImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(138, 59, 59, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .activityImage {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .activityImage {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .activityImage {
+    width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .activityImage {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .activityImage {
+    width: 100%;
+  }
+}

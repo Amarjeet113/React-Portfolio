@@ -1,0 +1,166 @@
+@keyframes pulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to bottom, black, gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1e3a8a, #2d2d2d, #000);
+  background-size: 200% 200%;
+  animation: pulse 15s ease infinite;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 8% auto;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  padding: 0 2%;
+}
+
+.heading {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.headingText {
+  font-size: 4rem;
+  font-weight: bold;
+  border-bottom: 4px solid gray;
+  margin-bottom: 1rem;
+}
+
+.subText {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input,
+.textarea {
+  padding: 0.5rem;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: cyan;
+}
+
+.button {
+  background: linear-gradient(to bottom, cyan, blue);
+  padding: 0.75rem 1.5rem;
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 1024px) {
+  .content {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .headingText {
+    font-size: 3rem;
+  }
+
+  .form {
+    max-width: 80%;
+  }
+
+  .content {
+    margin: 8% 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .headingText {
+    font-size: 2rem;
+  }
+
+  .form {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+  }
+}
+/* Increase the font size of the form labels and input fields */
+.input,
+.textarea,
+.label {
+  font-size: 14px;
+}
+
+/* Increase the padding around the input fields */
+.input,
+.textarea {
+  padding: 10px;
+}
+
+/* Make the form container wider on smaller screens */
+@media (max-width: 768px) {
+  .formContainer {
+    width: 90%;
+  }
+}
+
+

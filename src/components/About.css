@@ -1,0 +1,228 @@
+/* Keyframe for background gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Main container */
+.about-container {
+  width: 100%;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #1e3a8a, #2d2d2d, #000);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Titles & Headings */
+.title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #00b4d8;
+  text-shadow: 0px 0px 10px rgba(0, 180, 216, 0.7);
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #00b4d8;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* About Content Layout */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+  }
+}
+
+/* Text Content */
+.text-content {
+  flex: 1;
+  max-width: 600px;
+  padding: 1.5rem;
+}
+
+.text-content p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #60a5fa;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px rgba(96, 165, 250, 0.8);
+}
+
+/* Image Container */
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rotating Image Effect */
+.rotating-image {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0.9;
+}
+
+/* Smooth transition between images */
+.rotating-image:hover {
+  transform: rotateY(360deg) scale(1.05);
+  opacity: 1;
+}
+
+/* Sections */
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  color: #00b4d8;
+  text-shadow: 0px 0px 10px rgba(0, 180, 216, 0.7);
+}
+
+/* Horizontal Boxes (Education & Experience) */
+.horizontal-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .horizontal-boxes {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Box Design */
+.box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+}
+
+.box:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 10px 30px rgba(0, 180, 216, 0.9);
+  border: 2px solid #00b4d8;
+}
+
+/* Box Content */
+.box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #60a5fa;
+  text-shadow: 0px 0px 8px rgba(96, 165, 250, 0.8);
+}
+
+.box p {
+  font-size: 1.3rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+/* List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  color: #d1d5db;
+  position: relative;
+}
+
+/* Glow Effect */
+.neon-glow {
+  color: #00b4d8;
+  text-shadow: 0px 0px 10px rgba(0, 180, 216, 1);
+}
+
+/* Responsive Design Tweaks */
+@media (max-width: 1024px) {
+  .about-container {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .box {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .box {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .box {
+    padding: 0.8rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .box h3 {
+    font-size: 1.5rem;
+  }
+}
